@@ -15,6 +15,17 @@ body {
 .header .logo {
     margin-left: 72px;
 }
+.logo h1 {
+    width: 200px;
+    height: 100px;
+}
+.logo h1 img {
+    width: 200px;
+    height: 100px;
+}
+.mainbar {
+    margin-left: 100px;
+}
 .header .tag {
     width: 200px;
     height: 100%;
