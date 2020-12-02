@@ -68,3 +68,13 @@ body {
     color: rgba(0, 0, 0, 0.75);
     margin: 0px 140px 10px 142px;
 }
+.login {
+    margin-left: 700px;
+}
+.login .loginText {
+    font-size: 20px;
+    font-weight: 700;
+    width: 150px;
+    height: 72px;
+    line-height: 100px;
+}
