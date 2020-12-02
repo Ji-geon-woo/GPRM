@@ -1,0 +1,59 @@
+@import url("./reset.css");
+body {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(139, 185, 255, 0.45);
+}
+.header div {
+    float: left;
+}
+.header .logo {
+    margin-left: 72px;
+}
+.header .tag {
+    width: 200px;
+    height: 100%;
+    text-align: center;
+}
+.header .tag a {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 100px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+.mainInner {
+    width: 1300px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.mainInner .box {
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    position: absolute;
+}
+.box-left {
+    margin-left: 800px;
+}
+.box img{
+    width: 200px;
+    height: 200px;
+    margin: 100px 150px 10px 150px;
+}
+.box .text {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.75);
+    margin: 0px 140px 10px 160px;
+}
+.box .text2 {
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.75);
+    margin: 0px 140px 10px 142px;
+}
