@@ -1,0 +1,40 @@
+@import url("./reset.css");
+body {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(139, 185, 255, 0.45);
+}
+.header div {
+    float: left;
+}
+.header .logo {
+    margin-left: 72px;
+}
+.logo h1 {
+    width: 200px;
+    height: 100px;
+}
+.logo h1 img {
+    width: 200px;
+    height: 100px;
+}
+.mainbar {
+    margin-left: 100px;
+}
+.header .tag {
+    width: 200px;
+    height: 100%;
+    text-align: center;
+}
+.header .tag a {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 100px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
