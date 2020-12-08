@@ -7,11 +7,11 @@ body {
 }
 #inner .singUpBox {
     width: 558px;
-    height: 712px;
+    height: 690px;
     background-color: #ffffff;
     border: 4px solid rgba(0,0,0, 0.5);
     margin: 0 auto;
-    margin-top: 300px;
+    margin-top: 50px;
 }
 .inputBox {
     margin-top: 100px;
@@ -32,6 +32,14 @@ body {
     border-bottom: 1px solid rgba(164, 164 , 249, 0.27);
     width: 376px;
     font-size: 20px;
+}
+.checkbox {
+    margin-left: 90px;
+    margin-top: 30px;
+}
+.checkbox div{
+    float: left;
+    margin-right: 20px;
 }
 .buttonLogin {
     width: 10px;
@@ -54,7 +62,7 @@ body {
     margin-left: 330px;
     margin-top: 10px;
 }
-.Singup {
+.Signup {
     width: 100px;
     height: 70px;
     border: 0px;
