@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var model = require('../models/usersDAO');
 
 // 로그인 처리
 router.post('/login', (req, res)=>{
