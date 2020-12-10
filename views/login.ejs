@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/stylesheets/signUp.css">
+</head>
+<body>
+    <section id="inner">
+        <form action="">
+            <div class="loginBox">
+                <div class="inputBox">
+                    <div class="idBox">
+                        <div class="Box">
+                            <!-- email -->
+                            <div class="text">ID</div>
+                            <input type="text" id="id" class="textBox" placeholder="Email" value="<%= typeof id != 'undefined' ? id : '' %>">
+                        </div>
+                    </div>
+                    <div class="passwordBox">
+                        <div class="Box">
+                            <!-- password -->
+                            <div class="text">비밀번호</div>
+                            <input type="text" id="password1" class="textBox" placeholder="password1" value="<%= typeof password1 != 'undefined' ? password1 : '' %>">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="login">Login</input>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

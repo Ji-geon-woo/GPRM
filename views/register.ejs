@@ -5,45 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/stylesheets/signUp.css">
+    <% include ./partials/messages %>
 </head>
 <body>
     <section id="inner">
         <form action="">
-            <div class="singUpBox">
+            <div class="registerBox">
                 <div class="inputBox">
-                    <div class="Box">
-                        <!-- email -->
-                        <div class="text">email</div>
-                        <input type="text" id="email" class="textBox" placeholder="Email">
+                    <div>
+                        <div class="Box">
+                            <!-- email -->
+                            <div class="text">ID</div>
+                            <input type="text" id="id" class="textBox" placeholder="Email" value="<%= typeof id != 'undefined' ? id : '' %>">
+                        </div>
                     </div>
                     <div class="checkbox">
                         <div class="student">
                             <p>학생</p>
-                            <input type="radio" name="Choice" value="">
+                            <input type="checkbox" name="role" value="student">
                         </div>
                         <div class="student">
                             <p>선생님</p>
-                            <input type="radio" name="Choice" value="">
+                            <input type="checkbox" name="role" value="teacher">
                         </div>
                         <div class="student">
                             <p>학생자치회</p>
-                            <input type="radio" name="Choice" value="">
+                            <input type="checkbox" name="role" value="council">
                         </div>
                     </div>
                     <div class="passwordBox">
                         <div class="Box">
                             <!-- password -->
-                            <div class="text">password</div>
-                            <input type="text" id="email" class="textBox" placeholder="password">
+                            <div class="text">비밀번호</div>
+                            <input type="text" id="email" class="textBox" placeholder="password1" value="<%= typeof password1 != 'undefined' ? password1 : '' %>">
                         </div>
                         <div class="Box">
                             <!-- password -->
-                            <div class="text">password 확인</div>
-                            <input type="text" id="email" class="textBox" placeholder="password">
+                            <div class="text">비밀번호 확인</div>
+                            <input type="text" id="email" class="textBox" placeholder="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
                         </div>
                     </div>
                     <div>
-                        <button class="Signup">signup</button>
+                        <input type="submit" class="register">Register</input>
                     </div>
                 </div>
             </div>

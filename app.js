@@ -8,7 +8,9 @@ var session = require('express-session')
 var MySQLStore = require('express-mysql-session')(session);
 require('dotenv').config()
 
-var usersRouter = require('./routes/signup');
+var mainRouter = require('./routes/main');
+var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -43,9 +45,9 @@ app.use(session({
 }));
 //#endregion
 
-app.use('/', mainRouter);
+app.use('/', mainRouter)
 app.use('/login', loginRouter);
-app.use('/signUp', signUpRouter);
+app.use('/register', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
