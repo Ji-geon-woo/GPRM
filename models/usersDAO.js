@@ -11,8 +11,8 @@ exports.selectUser = function(ID, cb){
 }
 
 exports.insertUser = function(body, cb){
-    sql = 'INSERT INTO users (ID, role, PW) VALUES(?, ?, ?)';
-    values = [body.id, body.role, body.password1];
+    sql = 'INSERT INTO users (ID, PW, role, name) VALUES(?, ?, ?, ?)';
+    values = [body.ID, body.PW1, body.role, body.name];
     connection.query(sql, values, function(error, results, fields){
         if(error){
             console.log(error);

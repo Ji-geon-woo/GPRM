@@ -2,33 +2,37 @@ var express = require('express');
 var router = express.Router();
 var model = require('../models/usersDAO');
 
+router.get('/register', (req, res) => res.render('register', {errors: []}))
 // 로그인 처리
 router.post('/register', (req, res)=> {
-  const { id, role, password1, password2 } = req.body
+  const { ID, role, name, PW1, PW2 } = req.body
   let errors = []
 
-  if (!id || !role || !password1 || !password2) {
-    errors.push({massage : 'Please enter all fields.'})
+  if (!ID || !role || !name || !PW1 || !PW2) {
+    errors.push({message :'Please enter all fields.'})
   }
-  if (password1 != password2) {
-    errors.push({massage : 'Passwords is not match.'})
+  if (PW1 != PW2) {
+    errors.push({message : 'Password is not match.'})
   }
-  if (password1 < 6){
-    errors.push({massage : 'Password is must be at least 6 characters.'})
+  if (PW1 < 6){
+    errors.push({message : 'Password is must be at least 6 characters.'})
   }
 
   if (errors.length > 0){
-    res.render('register', { errors, id, role, password1, password2})
+    res.render('register', { errors: errors, ID: '', name: '', role: '', PW1: '', PW2: ''})
   } else {
-    model.selectUser(req.body.id, (results)=>{
-      if(req.body.id === results[0].id) {
-        errors.push({massage : 'ID already exists.'})
-        res.render('register', { errors, id, role, password1, password2})
-      } else {
-        model.insertUser(req.body.id, req.body.role, req.body.password1)
+    model.selectUser(req.body.ID, (results)=>{
+      try {
+        if(req.body.ID === results[0].ID) {
+          errors.push({message : 'ID already exists.'})
+          res.render('register', { errors, ID, name, role, PW1, PW2})
+        }
+      } catch (e) {
+        model.insertUser(req.body, ()=>{
+          res.redirect('/login')
+        })
       }
     });
   }
 })
-
 module.exports = router;

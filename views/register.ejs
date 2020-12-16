@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/stylesheets/signUp.css">
-    <% include ./partials/messages %>
 </head>
 <body>
     <section id="inner">
-        <form action="">
+        <form action="/register" method="POST">
+            <% if (errors.length == 0) {%> 
             <div class="registerBox">
                 <div class="inputBox">
                     <div>
                         <div class="Box">
-                            <!-- email -->
+                            <!-- id -->
                             <div class="text">ID</div>
-                            <input type="text" id="id" class="textBox" placeholder="Email" value="<%= typeof id != 'undefined' ? id : '' %>">
+                            <input type="text" id="ID" class="textBox" placeholder="ID" name="ID" value="<%= typeof id != 'undefined' ? id : '' %>">
                         </div>
+                    </div>
+                    <div class="Box">
+                        <!-- name -->
+                        <div class="text">이름</div>
+                        <input type="text" id="name" class="textBox" placeholder="name" name="name" value="<%= typeof name != 'undefined' ? name : '' %>">
                     </div>
                     <div class="checkbox">
                         <div class="student">
@@ -37,12 +41,12 @@
                         <div class="Box">
                             <!-- password -->
                             <div class="text">비밀번호</div>
-                            <input type="text" id="email" class="textBox" placeholder="password1" value="<%= typeof password1 != 'undefined' ? password1 : '' %>">
+                            <input type="text" id="PW1" class="textBox" placeholder="PW1" name="PW1" value="<%= typeof PW1 != 'undefined' ? PW1 : '' %>">
                         </div>
                         <div class="Box">
                             <!-- password -->
                             <div class="text">비밀번호 확인</div>
-                            <input type="text" id="email" class="textBox" placeholder="password2" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                            <input type="text" id="PW2" class="textBox" placeholder="PW2" name="PW2" value="<%= typeof PW2 != 'undefined' ? PW2 : '' %>">
                         </div>
                     </div>
                     <div>
@@ -50,6 +54,9 @@
                     </div>
                 </div>
             </div>
+            <% } else { %> 
+                <h1><%= errors.message %></h1>
+            <% } %> 
         </form>
     </section>
 </body>
